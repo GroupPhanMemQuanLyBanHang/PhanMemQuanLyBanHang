@@ -18,15 +18,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class LoaiKHBLL {
     public static void DoDuLieu(ResultSet rs, JTable jTable10) {
-        Object[] objs = new Object[]{ "Nhóm Khách hàng"};
+        Object[] objs = new Object[]{"Mã Loại KH", "Nhóm Khách Hàng"};
         DefaultTableModel tableModel = new DefaultTableModel(objs, 0);
         jTable10.setModel(tableModel);
         try {
             while (rs.next()) {
-                Object[] item = new Object[1];
-               
-                item[0] = rs.getString("TenLoaiKH");
-               
+                Object[] item = new Object[2];
+                item[0] = rs.getInt("MaLoaiKH");
+                item[1] = rs.getString("TenLoaiKH");
                 tableModel.addRow(item);
             }
         } catch (SQLException ex) {

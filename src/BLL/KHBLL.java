@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class KHBLL {
     public static void DoDuLieu(ResultSet rs, JTable khachhang) {
-        Object[] objs = new Object[]{"Mã KH", "Mã Loại KH", "Họ Tên","Địa Chỉ","Giới Tính","Điện Thoại","Loại KH","Mô Tả"};
+        Object[] objs = new Object[]{"Mã KH", "Mã Loại KH", "Tên KH","Địa Chỉ","Giới Tính","SĐT","Loại KH","Mô Tả"};
         DefaultTableModel tableModel = new DefaultTableModel(objs, 0);
         khachhang.setModel(tableModel);
         try {
